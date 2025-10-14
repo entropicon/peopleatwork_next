@@ -224,6 +224,20 @@ export interface Job {
 	is_company_confidential: boolean;
 }
 
+export interface MemberCardProps {
+	id: string;
+	member: {
+		id: string;
+		full_name: string;
+		profile_picture: string;
+		instagram: string;
+		linkedin: string;
+		twitter: string;
+		facebook: string;
+	};
+	position: string;
+}
+
 export interface CompanyProfileTypes {
 	id: string;
 	name: string;
