@@ -238,6 +238,14 @@ export interface MemberCardProps {
 	position: string;
 }
 
+export interface JobCategories {
+	name_az: string;
+	name_en: string;
+	name_ru: string;
+	id: number;
+	job_count: number;
+}
+
 export interface CompanyProfileTypes {
 	id: string;
 	name: string;
