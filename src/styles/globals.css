@@ -1,0 +1,158 @@
+:root {
+  /* BRAND COLORS */
+  --primary-color: #4640de;
+  --secondary-color: #ccccf5;
+  --tertiary-color: #e7f6fd;
+  /* ACCENT COLORS */
+  --yellow: rgb(255, 184, 54);
+  --green: #00cc00;
+  --red: rgb(255, 101, 80);
+  --blue: #26a4ff;
+  --purple: #7b61ff;
+  --white: #ffffff;
+  --orange: #ff8a65;
+  /* NEUTRAL COLORS */
+  --neutral-darkest: #25324b;
+  --neutral-darker: #515b6f;
+  --neutral-dark: #7c8493;
+  --neutral-medium: #a8adb7;
+  --neutral-light: #e9ebfd;
+  --neutral-lighter: #f9fafc;
+  --neutral-lightest: #f8f8fd;
+  --border-color: #d6ddeb;
+  --text-color: #252430;
+  --footer-bg: #202430;
+  --box-shadow: 2px 2px 2px #e9ebfd6c;
+}
+
+@font-face {
+  font-family: 'Epilogue Thin';
+  src: url('/fonts/Epilogue-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'Epilogue Light';
+  src: url('/fonts/Epilogue-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Epilogue ExtraLight';
+  src: url('/fonts/Epilogue-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'Epilogue Regular';
+  src: url('/fonts/Epilogue-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Epilogue Medium';
+  src: url('/fonts/Epilogue-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Epilogue SemiBold';
+  src: url('/fonts/Epilogue-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Epilogue Bold';
+  src: url('/fonts/Epilogue-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Epilogue ExtraBold';
+  src: url('/fonts/Epilogue-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: 'Clashdisplay Regular';
+  src: url('/fonts/ClashDisplay-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Clashdisplay Medium';
+  src: url('/fonts/ClashDisplay-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Clashdisplay SemiBold';
+  src: url('/fonts/ClashDisplay-Semibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Clashdisplay Bold';
+  src: url('/fonts/ClashDisplay-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lora Bold';
+  src: url('/fonts/Lora-Bold.ttf');
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding-right: 0!important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-position: inside;
+  font-family: 'Epilogue Regular', sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.quill a,
+a.styled {
+  color: var(--primary-color);
+  font-family: 'Epilogue SemiBold', sans-serif;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+input[type='file']+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 129px;
+  border: 3px dashed;
+  cursor: pointer;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+input[type='file']+label.error {
+  border: 3px dashed var(--red);
+  color: var(--red);
+}
+
+/* Quill Text Editor */
+
+.ql-container {
+  font-family: 'Epilogue Regular', sans-serif;
+  height: 200px;
+  font-size: 16px;
+}
+
+.one-line-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  white-space: nowrap;
+  width: 100%;
+}

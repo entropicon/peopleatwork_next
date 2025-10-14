@@ -1,0 +1,225 @@
+{
+  "placeholder": {
+    "email": "Email",
+    "searchForJobs": "İş axtar"
+  },
+  "label": {
+    "city": "Şəhər"
+  },
+  "button": {
+    "search": "Axtar",
+    "view_details": "Ətraflı bax",
+    "clear": "Təmizlə",
+    "post_job": "Vakansiya yerləşdir",
+    "apply": "Müraciət et",
+    "quick_apply": "Sürətli müraciət"
+  },
+  "form": {
+    "error": {
+      "required": "Bu sahə tələb olunur",
+      "invalidEmail": "Yanlış email ünvanı",
+      "invalidPhoneNumber": "Yanlış telefon nömrəsi",
+      "invalidUrl": "Yanlış URL",
+      "minLength": "Ən az {min} simvol olmalıdır",
+      "maxLength": "Ən çox {max} simvol ola bilər",
+      "invalidNumber": "Yanlış rəqəm",
+      "invalidSalaryRange": "Yanlış əmək haqqı diapazonu"
+    },
+    "label": {
+      "description": "Təsvir",
+      "responsibilities": "Öhdəliklər",
+      "who_you_are": "Siz kimsiniz",
+      "nice_to_have": "Arzuolunan",
+      "key_objectives": "Əsas məqsədlər",
+      "measurable_outcomes": "Ölçülə bilən nəticələr",
+      "education": "Təhsil",
+      "certification": "Sertifikat",
+      "industry_spesific_knowledge": "Sahəyə aid biliklər"
+    }
+  },
+  "payment": {
+    "common": {
+      "goHome": "Ana səhifəyə qayıt"
+    },
+    "success": {
+      "title": "Ödəniş uğurla tamamlandı",
+      "description": "Təşəkkür edirik! Ödənişiniz uğurla emal olundu."
+    },
+    "error": {
+      "title": "Ödəniş uğursuz oldu",
+      "description": "Ödənişiniz emal olunarkən nəsə səhv oldu.",
+      "hint": "Zəhmət olmasa yenidən cəhd edin."
+    },
+    "result": {
+      "title": "Ödəniş statusu",
+      "description": "Ödəniş nəticəsini aşağıda yoxlayın.",
+      "status": {
+        "success": "Uğurlu",
+        "pending": "Gözləmədə",
+        "failed": "Uğursuz",
+        "unknown": "Naməlum"
+      },
+      "statusDescription": {
+        "success": "Ödənişiniz təsdiqləndi və alışınız aktivləşdirildi.",
+        "pending": "Ödənişiniz emal olunur. Bu proses bir neçə dəqiqə çəkə bilər.",
+        "failed": "Ödəniş tamamlanmadı. Yenidən cəhd edə və ya dəstək ilə əlaqə saxlaya bilərsiniz.",
+        "unknown": "Ödəniş statusunu müəyyən etmək mümkün olmadı. Zəhmət olmasa bir qədər sonra yenidən yoxlayın."
+      },
+      "detailsTitle": "Ödəniş detalları",
+      "fields": {
+        "orderId": "Sifariş nömrəsi",
+        "transactionId": "Transaksiya nömrəsi",
+        "amount": "Məbləğ",
+        "currency": "Valyuta",
+        "provider": "Ödəniş provayderi",
+        "message": "Mesaj",
+        "paidAt": "Ödəniş tarixi"
+      },
+      "actions": {
+        "tryAgain": "Yenidən cəhd et",
+        "contactSupport": "Dəstək ilə əlaqə"
+      }
+    }
+  },
+  "homePage": {
+    "headerText1": "Kəşf et",
+    "headerText2": "daha çox",
+    "headerText3": "vakansiya",
+    "headerText4": "Yeni karyera zirvələrini axtaran və startaplara həvəsli olanlar üçün",
+    "headerText5": " əla platforma.",
+    "popularSearches": "Populyar axtarışlar",
+    "categories": {
+      "design": "Dizayn",
+      "sales": "Satış",
+      "marketing": "Marketinq",
+      "finance": "Maliyyə",
+      "technology": "Texnologiya",
+      "engineering": "Mühəndislik",
+      "business": "Biznes",
+      "humanResources": "İnsan Resursları"
+    },
+    "categoryHeading": {
+      "text1": "Kateqoriyalara görə",
+      "text2": "araşdır"
+    },
+    "dashboardAds": {
+      "text1": "Elan yerləşdirməyə",
+      "text2": "bu gün başla",
+      "text3": "Yalnız 10 AZN-ə vakansiya yerləşdir.",
+      "text4": "Pulsuz Qeydiyyat"
+    },
+    "featuredJobs": {
+      "text1": "Seçilmiş",
+      "text2": "vakansiyalar"
+    },
+    "recommendedJobs": {
+      "text1": "Tövsiyə olunan",
+      "text2": "vakansiyalar"
+    },
+    "footer": {
+      "text1": "Startaplara həvəsli olanlar üçün əla platforma. Arzuladığınız işi daha asan tapın.",
+      "about": {
+        "about": "Haqqımızda",
+        "companies": "Şirkətlər",
+        "pricing": "Qiymətlər",
+        "terms": "Şərtlər",
+        "advice": "Məsləhətlər",
+        "privacy": "Məxfilik Siyasəti"
+      },
+      "resources": {
+        "resources": "Resurslar",
+        "helpDocs": "Yardım Sənədləri",
+        "guide": "Bələdçi",
+        "updates": "Yeniliklər",
+        "contact": "Bizimlə əlaqə"
+      },
+      "getJobNotifications": "İş elanları barədə bildirişlər al",
+      "subscribe": "Abunə ol",
+      "subscribeText": "Bülletenimizə abunə olun və ən son vakansiyalardan xəbərdar olun."
+    },
+    "findYour": "Tap",
+    "dreamJob": "arzuladığın işi",
+    "findYourDreamJobDescription": "HubSpot, Nike və Dropbox kimi şirkətlərdə növbəti karyeranı tap"
+  },
+  "notFound": {
+    "backToHome": "Əsas səhifəyə qayıt",
+    "description": "Üzr istəyirik, axtardığınız səhifə tapılmadı.",
+    "title": "Səhifə tapılmadı"
+  },
+  "common": {
+    "notSpecified": "Göstərilməyib",
+    "showAllJobs": "Bütün vakansiyaları göstər",
+    "jobs": "Vakansiya",
+    "findJobs": "İş tap",
+    "browseCompanies": "Şirkətlərə bax",
+    "login": "Daxil ol",
+    "signUp": "Qeydiyyat",
+    "notFoundAnyResults": "Nəticə tapılmadı",
+    "employmentType": "İş növü",
+    "categories": "Kateqoriyalar",
+    "jobLevel": "Vəzifə səviyyəsi",
+    "sortBy": "Sıralama",
+    "mostRelevant": "Ən uyğun",
+    "AtoZ": "A-dan Z-yə",
+    "ZtoA": "Z-dən A-ya",
+    "newest": "Ən yeni",
+    "oldest": "Ən köhnə",
+    "filter": "Filter",
+    "jobListing": "Vakansiya siyahısı",
+    "confidential": "Gizli",
+    "hired": "Qəbul",
+    "openings": "Açıq yer",
+    "salary": "Əmək haqqı",
+    "home": "Əsas səhifə",
+    "jobDetails": "Vakansiya haqqında",
+    "similarJobs": "Oxşar vakansiyalar",
+    "apply": "Müraciət et",
+    "live": "Aktiv",
+    "category": "Kateqoriya",
+    "readMore": "Daha ətraflı",
+    "allCompanies": "Bütün şirkətlər",
+    "industry": "Sektor",
+    "companies": "Şirkətlər",
+    "founded": "Təsis ili",
+    "employee_count": "İşçi sayı",
+    "address": "Ünvan",
+    "openJobs": "Açıq vakansiyalar",
+    "description": "Təsvir",
+    "contact": "Əlaqə",
+    "workingAt": "Burada işləmək",
+    "showLess": "Daha az göstər",
+    "showAll": "Hamısını göstər",
+    "team": "Komanda",
+    "posted": "Paylaşıldı",
+    "deadline": "Son müraciət",
+    "ago": "əvvəl",
+    "months": "ay",
+    "days": "gün",
+    "minutes": "dəqiqə",
+    "hours": "saat",
+    "seconds": "saniyə",
+    "search": "Axtar",
+    "noDescription": "Təsvir yoxdur"
+  },
+  "jobDetails": {
+    "description": "Təsvir",
+    "measurable_outcomes": "Ölçülə bilən nəticələr",
+    "key_objectives": "Əsas məqsədlər",
+    "responsibilities": "Öhdəliklər",
+    "industry_spesific_knowledge": "Sahəyə aid biliklər",
+    "education": "Təhsil",
+    "certification": "Sertifikat",
+    "who_you_are": "Siz kimsiniz",
+    "nice_to_have": "Arzuolunan",
+    "perksAndBenefits": "İmtiyazlar və üstünlüklər",
+    "aboutThisRole": "Bu vəzifə haqqında",
+    "postDate": "Elan tarixi",
+    "applyBefore": "Son müraciət tarixi",
+    "jobType": "İş növü",
+    "notSpecified": "Göstərilməyib",
+    "salary": "Əmək haqqı",
+    "jobLevel": "Vəzifə səviyyəsi",
+    "experience": "Təcrübə",
+    "requiredSkills": "Tələb olunan bacarıqlar"
+  }
+}

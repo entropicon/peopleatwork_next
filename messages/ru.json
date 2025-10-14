@@ -1,0 +1,225 @@
+{
+  "placeholder": {
+    "email": "Электронная почта",
+    "searchForJobs": "Поиск работы"
+  },
+  "label": {
+    "city": "Город"
+  },
+  "button": {
+    "search": "Поиск",
+    "view_details": "Подробнее",
+    "clear": "Очистить",
+    "post_job": "Разместить вакансию",
+    "apply": "Откликнуться",
+    "quick_apply": "Быстрый отклик"
+  },
+  "form": {
+    "error": {
+      "required": "Это поле обязательно",
+      "invalidEmail": "Неверный адрес электронной почты",
+      "invalidPhoneNumber": "Неверный номер телефона",
+      "invalidUrl": "Неверный URL",
+      "minLength": "Должно быть не менее {min} символов",
+      "maxLength": "Должно быть не более {max} символов",
+      "invalidNumber": "Неверное число",
+      "invalidSalaryRange": "Неверный диапазон зарплаты"
+    },
+    "label": {
+      "description": "Описание",
+      "responsibilities": "Обязанности",
+      "who_you_are": "Кто вы",
+      "nice_to_have": "",
+      "key_objectives": "Ключевые цели",
+      "measurable_outcomes": "Измеримые результаты",
+      "education": "Образование",
+      "certification": "Сертификат",
+      "industry_spesific_knowledge": "Отраслевые знания"
+    }
+  },
+  "payment": {
+    "common": {
+      "goHome": "На главную"
+    },
+    "success": {
+      "title": "Платёж успешно выполнен",
+      "description": "Спасибо! Ваш платёж был успешно обработан."
+    },
+    "error": {
+      "title": "Платёж не выполнен",
+      "description": "При обработке вашего платежа произошла ошибка.",
+      "hint": "Пожалуйста, попробуйте ещё раз."
+    },
+    "result": {
+      "title": "Статус платежа",
+      "description": "Проверьте результат платежа ниже.",
+      "status": {
+        "success": "Успешно",
+        "pending": "В ожидании",
+        "failed": "Неудачно",
+        "unknown": "Неизвестно"
+      },
+      "statusDescription": {
+        "success": "Мы получили ваш платёж и активировали покупку.",
+        "pending": "Ваш платёж обрабатывается. Это может занять несколько минут.",
+        "failed": "Платёж не был завершён. Вы можете попробовать снова или связаться с поддержкой.",
+        "unknown": "Не удалось определить статус платежа. Попробуйте ещё раз позже."
+      },
+      "detailsTitle": "Детали платежа",
+      "fields": {
+        "orderId": "Номер заказа",
+        "transactionId": "Номер транзакции",
+        "amount": "Сумма",
+        "currency": "Валюта",
+        "provider": "Платёжный провайдер",
+        "message": "Сообщение",
+        "paidAt": "Дата оплаты"
+      },
+      "actions": {
+        "tryAgain": "Попробовать снова",
+        "contactSupport": "Связаться с поддержкой"
+      }
+    }
+  },
+  "homePage": {
+    "headerText1": "Откройте",
+    "headerText2": "более",
+    "headerText3": "вакансий",
+    "headerText4": "Отличная платформа для тех, кто ищет новые карьерные высоты и интересуется стартапами.",
+    "headerText5": "",
+    "popularSearches": "Популярные запросы",
+    "categories": {
+      "design": "Дизайн",
+      "sales": "Продажи",
+      "marketing": "Маркетинг",
+      "finance": "Финансы",
+      "technology": "Технологии",
+      "engineering": "Инженерия",
+      "business": "Бизнес",
+      "humanResources": "Кадровые ресурсы"
+    },
+    "categoryHeading": {
+      "text1": "Изучайте по",
+      "text2": "категориям"
+    },
+    "dashboardAds": {
+      "text1": "Начните размещать",
+      "text2": "вакансии сегодня",
+      "text3": "Размещайте вакансии всего за 10 AZN.",
+      "text4": "Бесплатная регистрация"
+    },
+    "featuredJobs": {
+      "text1": "Избранные",
+      "text2": "вакансии"
+    },
+    "recommendedJobs": {
+      "text1": "Рекомендуемые",
+      "text2": "вакансии"
+    },
+    "footer": {
+      "text1": "Отличная платформа для тех, кто интересуется стартапами. Найдите работу своей мечты проще.",
+      "about": {
+        "about": "О нас",
+        "companies": "Компании",
+        "pricing": "Цены",
+        "terms": "Условия",
+        "advice": "Советы",
+        "privacy": "Политика конфиденциальности"
+      },
+      "resources": {
+        "resources": "Ресурсы",
+        "helpDocs": "Справочные документы",
+        "guide": "Руководство",
+        "updates": "Обновления",
+        "contact": "Связаться с нами"
+      },
+      "getJobNotifications": "Получать уведомления о вакансиях",
+      "subscribe": "Подписаться",
+      "subscribeText": "Подпишитесь на нашу рассылку и получайте последние обновления о вакансиях."
+    },
+    "findYour": "Найдите",
+    "dreamJob": "работу мечты",
+    "findYourDreamJobDescription": "Найдите свою следующую карьеру в таких компаниях, как HubSpot, Nike и Dropbox"
+  },
+  "notFound": {
+    "backToHome": "Назад на главную",
+    "description": "Извините, страница, которую вы ищете, не найдена.",
+    "title": "Страница не найдена"
+  },
+  "common": {
+    "notSpecified": "Не указано",
+    "showAllJobs": "Показать все вакансии",
+    "jobs": "Вакансии",
+    "findJobs": "Найти работу",
+    "browseCompanies": "Просмотреть компании",
+    "login": "Войти",
+    "signUp": "Регистрация",
+    "notFoundAnyResults": "Результатов не найдено",
+    "employmentType": "Тип занятости",
+    "categories": "Категории",
+    "jobLevel": "Уровень должности",
+    "sortBy": "Сортировать по",
+    "mostRelevant": "Наиболее релевантные",
+    "AtoZ": "От А до Я",
+    "ZtoA": "От Я до А",
+    "newest": "Самые новые",
+    "oldest": "Самые старые",
+    "filter": "Фильтр",
+    "jobListing": "Список вакансий",
+    "confidential": "Конфиденциально",
+    "hired": "Принят",
+    "openings": "Открытые вакансии",
+    "salary": "Зарплата",
+    "home": "Главная",
+    "jobDetails": "Описание вакансии",
+    "similarJobs": "Похожие вакансии",
+    "apply": "Откликнуться",
+    "live": "Активно",
+    "category": "Категория",
+    "readMore": "Подробнее",
+    "allCompanies": "Все компании",
+    "industry": "Отрасль",
+    "companies": "Компании",
+    "founded": "Основана",
+    "employee_count": "Количество сотрудников",
+    "address": "Адрес",
+    "openJobs": "Открытые вакансии",
+    "description": "Описание",
+    "contact": "Контакт",
+    "workingAt": "Работа в",
+    "showLess": "Показать меньше",
+    "showAll": "Показать все",
+    "team": "Команда",
+    "posted": "Опубликовано",
+    "deadline": "Крайний срок",
+    "ago": "назад",
+    "months": "месяцев",
+    "days": "дней",
+    "minutes": "минут",
+    "hours": "часов",
+    "seconds": "секунд",
+    "search": "Поиск",
+    "noDescription": "Описание отсутствует"
+  },
+  "jobDetails": {
+    "description": "Описание",
+    "measurable_outcomes": "Измеримые результаты",
+    "key_objectives": "Ключевые цели",
+    "responsibilities": "Обязанности",
+    "industry_spesific_knowledge": "Отраслевые знания",
+    "education": "Образование",
+    "certification": "Сертификат",
+    "who_you_are": "Кто вы",
+    "nice_to_have": "Желательно",
+    "perksAndBenefits": "Преимущества и льготы",
+    "aboutThisRole": "О данной должности",
+    "postDate": "Дата публикации",
+    "applyBefore": "Подать заявку до",
+    "jobType": "Тип работы",
+    "notSpecified": "Не указано",
+    "salary": "Зарплата",
+    "jobLevel": "Уровень должности",
+    "experience": "Опыт",
+    "requiredSkills": "Требуемые навыки"
+  }
+}

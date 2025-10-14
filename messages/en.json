@@ -1,0 +1,225 @@
+{
+  "placeholder": {
+    "email": "Email",
+    "searchForJobs": "Search for jobs"
+  },
+  "label": {
+    "city": "City"
+  },
+  "button": {
+    "search": "Search",
+    "view_details": "View Details",
+    "clear": "Clear",
+    "post_job": "Post Job",
+    "apply": "Apply",
+    "quick_apply": "Quick Apply"
+  },
+  "form": {
+    "error": {
+      "required": "This field is required",
+      "invalidEmail": "Invalid email address",
+      "invalidPhoneNumber": "Invalid phone number",
+      "invalidUrl": "Invalid URL",
+      "minLength": "Must be at least {min} characters",
+      "maxLength": "Must be at most {max} characters",
+      "invalidNumber": "Invalid number",
+      "invalidSalaryRange": "Invalid salary range"
+    },
+    "label": {
+      "description": "Description",
+      "responsibilities": "Responsibilities",
+      "who_you_are": "Who You Are",
+      "nice_to_have": "Nice to Have",
+      "key_objectives": "Key Objectives",
+      "measurable_outcomes": "Measurable Outcomes",
+      "education": "Education",
+      "certification": "Certification",
+      "industry_spesific_knowledge": "Industry Specific Knowledge"
+    }
+  },
+  "payment": {
+    "common": {
+      "goHome": "Go to Home"
+    },
+    "success": {
+      "title": "Payment Successful",
+      "description": "Thank you! Your payment has been processed successfully."
+    },
+    "error": {
+      "title": "Payment Failed",
+      "description": "Something went wrong while processing your payment.",
+      "hint": "Please try again."
+    },
+    "result": {
+      "title": "Payment status",
+      "description": "Review the outcome of your payment below.",
+      "status": {
+        "success": "Successful",
+        "pending": "Pending",
+        "failed": "Failed",
+        "unknown": "Unknown"
+      },
+      "statusDescription": {
+        "success": "We received your payment and activated your purchase.",
+        "pending": "Your payment is being processed. This may take a couple of minutes.",
+        "failed": "The payment could not be completed. You can try again or contact support.",
+        "unknown": "We could not determine the payment status. Please check again later."
+      },
+      "detailsTitle": "Payment details",
+      "fields": {
+        "orderId": "Order ID",
+        "transactionId": "Transaction ID",
+        "amount": "Amount",
+        "currency": "Currency",
+        "provider": "Payment provider",
+        "message": "Message",
+        "paidAt": "Paid at"
+      },
+      "actions": {
+        "tryAgain": "Try again",
+        "contactSupport": "Contact support"
+      }
+    }
+  },
+  "homePage": {
+    "headerText1": "Discover",
+    "headerText2": "more than",
+    "headerText3": "jobs",
+    "headerText4": "Great platform for the job seeker that searching for",
+    "headerText5": " new career heights and passionate about startups.",
+    "popularSearches": "Popular Searches",
+    "categories": {
+      "design": "Design",
+      "sales": "Sales",
+      "marketing": "Marketing",
+      "finance": "Finance",
+      "technology": "Technology",
+      "engineering": "Engineering",
+      "business": "Business",
+      "humanResources": "Human Resources"
+    },
+    "categoryHeading": {
+      "text1": "Explore by",
+      "text2": "Category"
+    },
+    "dashboardAds": {
+      "text1": "Start posting",
+      "text2": "jobs today",
+      "text3": "Start posting jobs for only $10.",
+      "text4": "Sign Up Free"
+    },
+    "featuredJobs": {
+      "text1": "Featured",
+      "text2": "Jobs"
+    },
+    "recommendedJobs": {
+      "text1": "Recommended",
+      "text2": "Jobs"
+    },
+    "footer": {
+      "text1": "Great platform for the job seeker that passionate about startups. Find your dream job easier.",
+      "about": {
+        "about": "About",
+        "companies": "Companies",
+        "pricing": "Pricing",
+        "terms": "Terms",
+        "advice": "Advice",
+        "privacy": "Privacy Policy"
+      }, 
+      "resources": {
+        "resources": "Resources",
+        "helpDocs": "Help Docs",
+        "guide": "Guide",
+        "updates": "Updates",
+        "contact": "Contact Us"
+      },
+      "getJobNotifications": "Get Job Notifications",
+      "subscribe": "Subscribe",
+      "subscribeText": "Subscribe to our newsletter and get the latest job updates."
+    },
+    "findYour": "Find your",
+    "dreamJob": "dream job",
+    "findYourDreamJobDescription": "Find your next career at companies like HubSpot, Nike, and Dropbox"
+  },
+    "notFound": {
+      "backToHome": "Back to Home",
+      "description": "Sorry, the page you are looking for could not be found.",
+      "title": "Page Not Found"
+    },
+  "common": {
+    "notSpecified": "Not Specified",
+    "showAllJobs": "Show All Jobs",
+    "jobs": "Jobs",
+    "findJobs": "Find Jobs",
+    "browseCompanies": "Browse Companies",
+    "login": "Login",
+    "signUp": "Sign Up",
+    "notFoundAnyResults": "Not found any results",
+    "employmentType": "Employment Type",
+    "categories": "Categories",
+    "jobLevel": "Job Level",
+    "sortBy": "Sort By",
+    "mostRelevant": "Most Relevant",
+    "AtoZ": "A to Z",
+    "ZtoA": "Z to A",
+    "newest": "Newest",
+    "oldest": "Oldest",
+    "filter": "Filter",
+    "jobListing": "Job Listing",
+    "confidential": "Confidential",
+    "hired": "Hired",
+    "openings": "Openings",
+    "salary": "Salary",
+    "home": "Home",
+    "jobDetails": "Job Description",
+    "similarJobs": "Similar Jobs",
+    "apply": "Apply",
+    "live": "Live",
+    "category": "Category",
+    "readMore": "Read More",
+    "allCompanies": "All Companies",
+    "industry": "Industry",
+    "companies": "Companies",
+    "founded": "Founded",
+    "employee_count": "Employee Count",
+    "address": "Address",
+    "openJobs": "Open Jobs",
+    "description": "Description",
+    "contact": "Contact",
+    "workingAt": "Working at",
+    "showLess": "Show Less",
+    "showAll": "Show All",
+    "team": "Team",
+    "posted": "Posted",
+    "deadline": "Deadline",
+    "ago": "ago",
+    "months": "months",
+    "minutes": "minutes",
+    "hours": "hours",
+    "seconds": "seconds",
+    "search":"Search",
+    "noDescription": "No description",
+    "days": "days"
+  },
+  "jobDetails": {
+    "description": "Description",
+    "measurable_outcomes": "Measurable Outcomes",
+    "key_objectives": "Key Objectives",
+    "responsibilities": "Responsibilities",
+    "industry_spesific_knowledge": "Industry Specific Knowledge",
+    "education": "Education",
+    "certification": "Certification",
+    "who_you_are": "Who You Are",
+    "nice_to_have": "Nice to Have",
+    "perksAndBenefits": "Perks & Benefits",
+    "aboutThisRole": "About This Role",
+    "postDate": "Post Date",
+    "applyBefore": "Apply Before",
+    "jobType": "Job Type",
+    "notSpecified": "Not Specified",
+    "salary": "Salary",
+    "jobLevel": "Job Level",
+    "experience": "Experience",
+    "requiredSkills": "Required Skills"
+  }
+}
