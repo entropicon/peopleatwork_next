@@ -223,3 +223,31 @@ export interface Job {
 	is_active: boolean;
 	is_company_confidential: boolean;
 }
+
+export interface CompanyProfileTypes {
+	id: string;
+	name: string;
+	logo: string;
+	industry: Industry;
+	employee_count: string;
+	founded: Date;
+	description: string;
+	contact: {
+		email: string;
+		phone: string;
+		address: string;
+		location: string;
+		website: string;
+		twitter: string;
+		facebook: string;
+		linkedin: string;
+		instagram: string;
+	};
+	cv: string;
+	team: MemberCardProps[];
+	jobs: JobCardProps[];
+	images: {
+		id: string;
+		image: string;
+	}[];
+}
