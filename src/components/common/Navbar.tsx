@@ -1,14 +1,17 @@
 "use client";
 
 import useIsomorphicLayoutEffect from "@/hooks/useLayoutEffect";
-import { Menu, PostAdd } from "@mui/icons-material";
+import { Close, Menu, PostAdd } from "@mui/icons-material";
 import {
 	Box,
 	Button,
+	Container,
+	Divider,
 	Drawer,
 	IconButton,
 	List,
 	ListItem,
+	ListItemButton,
 	ListItemText,
 	MenuItem,
 	Select,
@@ -100,166 +103,245 @@ const Navbar: React.FC = () => {
 	);
 
 	return (
-		<Toolbar
+		<Box
+			component="header"
 			sx={{
-				height: "30px!important",
-				justifyContent: "space-between",
-				backgroundColor: scrolled ? "white" : "transparent",
 				position: "fixed",
 				top: 0,
-				borderBottom: scrolled ? "1px solid var(--border-color)" : "none",
-				width: "100%",
-				zIndex: 999,
-				px: {
-					xs: "2%",
-					s: "4%",
-					md: "6%",
-				},
+				left: 0,
+				right: 0,
+				zIndex: 1200,
+				borderBottom: scrolled ? "1px solid var(--border-color)" : "transparent",
+				backgroundColor: scrolled ? "rgba(255, 255, 255, 0.9)" : "transparent",
+				backdropFilter: scrolled ? "blur(10px)" : "none",
+				transition: "background-color 0.2s ease, border-color 0.2s ease",
 			}}
 		>
-			<Box
+			<Container
+				maxWidth="lg"
+				disableGutters
 				sx={{
-					display: "flex",
-					alignItems: "center",
-					gap: 2,
+					px: { xs: 2, sm: 3, md: 0 },
 				}}
 			>
-				<Link href={`/${locale}`}>
-					<Box
-						component="img"
-						src="/logo/logo_long.svg"
-						alt="logo"
-						sx={{
-							height: 35,
-						}}
-					/>
-				</Link>
-				{!isMobile && (
-					<React.Fragment>
-						<StyledLinkBox pathname={pathname} href={`/${locale}/jobs`}>
-							{t("common.findJobs")}
-						</StyledLinkBox>
-						<StyledLinkBox
-							pathname={pathname}
-							href={`/${locale}/browse-companies`}
-						>
-							{t("common.browseCompanies")}
-						</StyledLinkBox>
-					</React.Fragment>
-				)}
-			</Box>
-
-			{isMobile ? (
-				<React.Fragment>
-					<Box>
-						{language}
-						<IconButton aria-label="menu" onClick={toggleDrawer(true)}>
-							<Menu sx={{ fontSize: 36, fill: "#25324B" }} />
-						</IconButton>
-					</Box>
-					<Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
-						<Box
-							sx={{
-								width: "100vw",
-								height: "100vh",
-								display: "flex",
-								flexDirection: "column",
-								alignItems: "center",
-								justifyContent: "center",
-							}}
-							role="presentation"
-							onClick={toggleDrawer(false)}
-							onKeyDown={toggleDrawer(false)}
-						>
-							<List>
-								<ListItem>
-									<Link
-										href={`/${locale}/jobs`}
-										style={{
-											textDecoration: "none",
-										}}
-									>
-										<ListItemText primary={t("common.findJobs")} />
-									</Link>
-								</ListItem>
-								<ListItem>
-									<Link
-										href={`/${locale}/browse-companies`}
-										style={{
-											textDecoration: "none",
-										}}
-									>
-										<ListItemText primary={t("common.browseCompanies")} />
-									</Link>
-								</ListItem>
-								<ListItem
-									sx={{
-										mb: 1,
-									}}
-								>
-									<Button fullWidth variant="outlined">
-										<Link
-											href={`${process.env.NEXT_PUBLIC_MAIN_FRONT_URL}/auth/login`}
-										>
-											{t("common.login")}
-										</Link>
-									</Button>
-								</ListItem>
-								<ListItem>
-									<Button fullWidth variant="contained">
-										<Link
-											href={`${process.env.NEXT_PUBLIC_MAIN_FRONT_URL}/auth/register`}
-										>
-											{t("common.signUp")}
-										</Link>
-									</Button>
-								</ListItem>
-							</List>
-						</Box>
-					</Drawer>
-				</React.Fragment>
-			) : (
-				<Box
+				<Toolbar
 					sx={{
-						display: "flex",
-						alignItems: "center",
-						gap: 2,
+						minHeight: { xs: 64, md: 72 },
+						px: 0,
+						justifyContent: "space-between",
 					}}
 				>
-					{language}
-					{/* <Link href="/post-job">
-						<Button
-							variant="contained"
-							size="small"
-							startIcon={
-								<PostAdd
-									sx={{
-										mb: 0.5,
-									}}
-								/>
-							}
-						>
-							{t("button.post_job")}
-						</Button>
-					</Link> */}
-					<React.Fragment>
-						<Link href={`${process.env.NEXT_PUBLIC_MAIN_FRONT_URL}/auth/login`}>
-							<Button variant="outlined" size="small">
-								{t("common.login")}
-							</Button>
+					<Box
+						sx={{
+							display: "flex",
+							alignItems: "center",
+							gap: 2,
+						}}
+					>
+						<Link href={`/${locale}`}>
+							<Box
+								component="img"
+								src="/logo/logo_long.svg"
+								alt="logo"
+								sx={{
+									height: 35,
+								}}
+							/>
 						</Link>
+						{!isMobile && (
+							<React.Fragment>
+								<StyledLinkBox pathname={pathname} href={`/${locale}/jobs`}>
+									{t("common.findJobs")}
+								</StyledLinkBox>
+								<StyledLinkBox
+									pathname={pathname}
+									href={`/${locale}/browse-companies`}
+								>
+									{t("common.browseCompanies")}
+								</StyledLinkBox>
+							</React.Fragment>
+						)}
+					</Box>
+					{isMobile ? (
+						<React.Fragment>
+							<Box>
+								{language}
+								<IconButton aria-label="menu" onClick={toggleDrawer(true)}>
+									<Menu sx={{ fontSize: 36, fill: "#25324B" }} />
+								</IconButton>
+							</Box>
+							<Drawer
+								anchor="left"
+								open={drawerOpen}
+								onClose={toggleDrawer(false)}
+								PaperProps={{
+									sx: {
+										width: "100%",
+										maxWidth: 320,
+										background: "linear-gradient(180deg, rgba(245, 247, 250, 0.95) 0%, #fff 100%)",
+										borderRight: "1px solid var(--border-color)",
+										boxShadow: "0 12px 32px -12px rgba(37, 50, 75, 0.2)",
+										padding: 0,
+										display: "flex",
+										flexDirection: "column",
+									},
+								}}
+							>
+								<Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
+									<Box
+										sx={{
+											display: "flex",
+											alignItems: "center",
+											justifyContent: "space-between",
+											px: 2.5,
+											py: 2,
+										}}
+									>
+										<Link href={`/${locale}`}>
+											<Box
+												component="img"
+												src="/logo/logo_long.svg"
+												alt="logo"
+												sx={{ height: 28 }}
+											/>
+										</Link>
+										<IconButton
+											aria-label="close menu"
+											onClick={toggleDrawer(false)}
+											sx={{ color: "var(--neutral-dark)" }}
+										>
+											<Close />
+										</IconButton>
+									</Box>
+									<Divider />
+									<List
+										sx={{
+											flexGrow: 1,
+											py: 2,
+											px: 2.5,
+											display: "flex",
+											flexDirection: "column",
+											gap: 1,
+										}}
+									>
+										<ListItem disablePadding>
+											<ListItemButton
+												component={Link}
+												href={`/${locale}/jobs`}
+												onClick={toggleDrawer(false)}
+												sx={{
+													borderRadius: 2,
+													py: 1.5,
+												}}
+											>
+												<ListItemText
+													primary={t("common.findJobs")}
+													primaryTypographyProps={{
+														fontWeight: 600,
+														variant: "body1",
+													}}
+												/>
+											</ListItemButton>
+										</ListItem>
+										<ListItem disablePadding>
+											<ListItemButton
+												component={Link}
+												href={`/${locale}/browse-companies`}
+												onClick={toggleDrawer(false)}
+												sx={{
+													borderRadius: 2,
+													py: 1.5,
+												}}
+											>
+												<ListItemText
+													primary={t("common.browseCompanies")}
+													primaryTypographyProps={{
+														fontWeight: 600,
+														variant: "body1",
+													}}
+												/>
+											</ListItemButton>
+										</ListItem>
+									</List>
+									<Box
+										sx={{
+											px: 2.5,
+											pb: 3,
+											display: "flex",
+											flexDirection: "column",
+											gap: 1,
+										}}
+									>
+										<Button
+											fullWidth
+											variant="outlined"
+											component={Link}
+											href={`${process.env.NEXT_PUBLIC_MAIN_FRONT_URL}/auth/login`}
+											onClick={toggleDrawer(false)}
+											sx={{ borderRadius: 2 }}
+										>
+											{t("common.login")}
+										</Button>
+										<Button
+											fullWidth
+											variant="contained"
+											component={Link}
+											href={`${process.env.NEXT_PUBLIC_MAIN_FRONT_URL}/auth/register`}
+											onClick={toggleDrawer(false)}
+											sx={{ borderRadius: 2 }}
+										>
+											{t("common.signUp")}
+										</Button>
+									</Box>
+								</Box>
+							</Drawer>
+						</React.Fragment>
+					) : (
+						<Box
+							sx={{
+								display: "flex",
+								alignItems: "center",
+								gap: 2,
+							}}
+						>
+							{language}
+							<Link href="/post-job">
+								<Button
+									variant="contained"
+									size="small"
+									startIcon={
+										<PostAdd
+											sx={{
+												mb: 0.5,
+											}}
+										/>
+									}
+								>
+									{t("button.post_job")}
+								</Button>
+							</Link>
+							<React.Fragment>
+								<Link
+									href={`${process.env.NEXT_PUBLIC_MAIN_FRONT_URL}/auth/login`}
+								>
+									<Button variant="outlined" size="small">
+										{t("common.login")}
+									</Button>
+								</Link>
 
-						<Link
-							href={`${process.env.NEXT_PUBLIC_MAIN_FRONT_URL}/auth/register`}
-						>
-							<Button variant="contained" size="small">
-								{t("common.signUp")}
-							</Button>
-						</Link>
-					</React.Fragment>
-				</Box>
-			)}
-		</Toolbar>
+								<Link
+									href={`${process.env.NEXT_PUBLIC_MAIN_FRONT_URL}/auth/register`}
+								>
+									<Button variant="contained" size="small">
+										{t("common.signUp")}
+									</Button>
+								</Link>
+							</React.Fragment>
+						</Box>
+					)}
+				</Toolbar>
+			</Container>
+		</Box>
 	);
 };
 

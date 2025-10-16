@@ -5,8 +5,7 @@ import {
 	getEmploymentTypes,
 	getSkills,
 } from "@/lib/api";
-import { screenPadding } from "@/lib/utils";
-import { Box } from "@mui/material";
+import { Container } from "@mui/material";
 
 export default async function PostJobPage() {
 	const categories = await getCategories();
@@ -15,22 +14,13 @@ export default async function PostJobPage() {
 	const skills = await getSkills();
 
 	return (
-		<Box
-			sx={{
-				px: screenPadding,
-				py: 2,
-				mt: {
-					xs: "56px",
-					md: "64px",
-				},
-			}}
-		>
+		<Container maxWidth="lg" className="mt">
 			<PostJobFormComponents
 				categories={categories}
 				employmentTypes={employmentTypes}
 				skills={skills}
 				benefits={benefits}
 			/>
-		</Box>
+		</Container>
 	);
 }

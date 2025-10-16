@@ -17,7 +17,7 @@ const Heading: React.FC<HeadingProps> = React.memo(
 				direction="row"
 				justifyContent="space-between"
 				alignItems="center"
-				sx={{ pb: 4, pt: 8 }}
+				sx={{ pb: 4}}
 			>
 				<Typography variant="h1">
 					{text}

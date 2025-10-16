@@ -2,7 +2,7 @@
 
 import { JobCardProps } from "@/types/types";
 import { ArrowForward } from "@mui/icons-material";
-import { Box, Button, Grid } from "@mui/material";
+import { Box, Button, Container, Grid } from "@mui/material";
 import Link from "next/link";
 import Heading from "../common/Heading";
 import JobCardList from "./JobCardList";
@@ -19,57 +19,55 @@ interface RecommendedJobsProps {
 const RecommendedJobs: React.FC<RecommendedJobsProps> = React.memo(
 	({ md, jobs, text, text_blue }) => {
 		const t = useTranslations();
-
 		return (
 			<Box
 				component="section"
 				id="latest-jobs"
 				sx={{
-					px: {
-						xs: "2%",
-						s: "4%",
-						md: "6%",
-					},
-					pb: 8,
-					mt: 4,
+					width: "100%",
+					py: 8,
+					mb: "-2rem!important",
+					position: "relative",
 					backgroundColor: "var(--neutral-lightest)",
-					backgroundImage: `url("/images/bg/Pattern.png")`, // fixed typo here
+					backgroundImage: `url("/images/bg/Pattern.png")`,
 					backgroundPositionX: "right",
 					backgroundRepeat: "no-repeat",
 					backgroundSize: "contain",
 				}}
 			>
-				<Heading
-					text={text}
-					text_blue={text_blue}
-					button_text={t("common.showAllJobs")}
-					button_link="/jobs"
-				/>
-				<Grid container spacing={1}>
-					{jobs?.map((job) => (
-						<JobCardList key={job?.id} job={job} md_size={6} />
-					))}
-				</Grid>
-				{!md && (
-					<Button
-						variant="text"
-						sx={{
-							color: "var(--primary-color)",
-						}}
-						component={Link}
-						href="/jobs"
-						endIcon={
-							<ArrowForward
-								sx={{
-									ml: 1,
-									fill: "var(--primary-color)",
-								}}
-							/>
-						}
-					>
-						{t("common.showAllJobs")}
-					</Button>
-				)}
+				<Container maxWidth="lg">
+					<Heading
+						text={text}
+						text_blue={text_blue}
+						button_text={t("common.showAllJobs")}
+						button_link="/jobs"
+					/>
+					<Grid container spacing={1}>
+						{jobs?.map((job) => (
+							<JobCardList key={job?.id} job={job} md_size={6} />
+						))}
+					</Grid>
+					{!md && (
+						<Button
+							variant="text"
+							sx={{
+								color: "var(--primary-color)",
+							}}
+							component={Link}
+							href="/jobs"
+							endIcon={
+								<ArrowForward
+									sx={{
+										ml: 1,
+										fill: "var(--primary-color)",
+									}}
+								/>
+							}
+						>
+							{t("common.showAllJobs")}
+						</Button>
+					)}
+				</Container>
 			</Box>
 		);
 	}

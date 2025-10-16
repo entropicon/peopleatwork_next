@@ -1,7 +1,6 @@
 "use client";
 
-import { screenPadding } from "@/lib/utils";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,15 +9,13 @@ import React from "react";
 const containerSx = {
 	minHeight: "414px",
 	backgroundColor: "var(--primary-color)",
-	my: "4.5rem",
 	display: "flex",
 	alignItems: "center",
 	px: { xs: "1rem", md: "5rem" },
 	py: { xs: "100px", md: "1rem" },
 	flexWrap: { xs: "wrap", md: "nowrap" },
-	gap: "2rem",
+	gap: 4,
 	position: "relative",
-	mx: screenPadding
 };
 
 const topLeftBoxSx = {
@@ -67,7 +64,7 @@ const imageStyle = {
 const DashboardAds: React.FC = React.memo(() => {
 	const t = useTranslations("homePage");
 	return (
-		<Box sx={containerSx}>
+		<Container maxWidth="lg" sx={containerSx}>
 			<Box sx={topLeftBoxSx} />
 			<Stack sx={stackSx} spacing={2}>
 				<Typography variant="h1" color="var(--white)">
@@ -105,7 +102,7 @@ const DashboardAds: React.FC = React.memo(() => {
 				/>
 			</Box>
 			<Box sx={bottomRightBoxSx} />
-		</Box>
+		</Container>
 	);
 });
 

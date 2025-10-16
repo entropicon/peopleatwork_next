@@ -1,24 +1,20 @@
 "use client";
 
 import { ArrowForward } from "@mui/icons-material";
-import { Box, Button, Grid } from "@mui/material";
+import { Button, Container, Grid } from "@mui/material";
 
 import { JobCardProps } from "@/types/types";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Heading from "../common/Heading";
 import JobCardGrid from "../jobs/JobCardGrid";
-import { useTranslations } from "next-intl";
-import { screenPadding } from "@/lib/utils";
 
 const FeaturedJobs = ({ md, jobs }: { md: boolean; jobs: JobCardProps[] }) => {
 	const t = useTranslations();
 	return (
-		<Box
+		<Container maxWidth="lg"
 			component="section"
 			id="featured-jobs"
-			sx={{
-				px: screenPadding,
-			}}
 		>
 			<Heading
 				text={t("homePage.featuredJobs.text1")}
@@ -49,7 +45,7 @@ const FeaturedJobs = ({ md, jobs }: { md: boolean; jobs: JobCardProps[] }) => {
 					/>
 				</Button>
 			)}
-		</Box>
+		</Container>
 	);
 };
 

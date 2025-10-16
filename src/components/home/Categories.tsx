@@ -1,12 +1,11 @@
 import { ArrowForward } from "@mui/icons-material";
-import { Box, Button, Grid } from "@mui/material";
+import { Button, Container, Grid } from "@mui/material";
 
 import { JobCategories } from "@/types/types";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Heading from "../common/Heading";
 import CategoryCard from "./CategoryCard";
-import { useTranslations } from "next-intl";
-import { screenPadding } from "@/lib/utils";
 
 const Categories = ({
 	md,
@@ -17,13 +16,7 @@ const Categories = ({
 }) => {
 	const t = useTranslations();
 	return (
-		<Box
-			component="section"
-			id="categories"
-			sx={{
-				px: screenPadding
-			}}
-		>
+		<Container maxWidth="lg" component="section" id="categories">
 			<Heading
 				text={t("homePage.categoryHeading.text1")}
 				text_blue={t("homePage.categoryHeading.text2")}
@@ -53,7 +46,7 @@ const Categories = ({
 					</Link>
 				</Button>
 			)}
-		</Box>
+		</Container>
 	);
 };
 

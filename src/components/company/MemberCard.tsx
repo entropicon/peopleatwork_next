@@ -61,7 +61,7 @@ const MemberCard = ({ member }: { member: MemberCardProps }) => {
   const router = useRouter();
 
   return (
-    <Grid size={{ xs: 6, md: 4 }}>
+    <Grid size={{ xs: 6, md: 3 }}>
       <Card
         sx={{
           boxShadow: 1,

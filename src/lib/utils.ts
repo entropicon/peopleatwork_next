@@ -8,11 +8,6 @@ export const getLocalizedName = (
   return obj[`name_${lang}` as "name_en" | "name_az" | "name_ru"] || "";
 };
 
-export const screenPadding = {
-  xs: "2%",
-  s: "4%",
-  md: "6%",
-}
 
 export function detectCardType(digits: string): "visa" | "mastercard" | undefined {
   if (!digits) return undefined;

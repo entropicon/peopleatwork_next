@@ -221,5 +221,48 @@
     "jobLevel": "Vəzifə səviyyəsi",
     "experience": "Təcrübə",
     "requiredSkills": "Tələb olunan bacarıqlar"
+  },
+  "aboutUs": {
+    "heroTitle": "İnsanların işləmə tərzini dəyişdiririk",
+    "heroSubtitle": "Biz məlumat əsaslı və yeni texnologiyalar vasitəsilə talent kəşfi və idarəçiliyində inqilab edir, iş axtaranları məna dolu karyeralarla gücləndirərkən biznes üçün transformativ dəyər yaradır.",
+    "missionTitle": "Bizim Missiyamız",
+    "missionText1": "Missiyamız — şirkətlərin istedad kəşfi və idarəetmə üsullarını qabaqcıl, məlumat əsaslı texnologiyalar vasitəsilə inqilabi şəkildə dəyişməkdir. Biz bizneslərə ən uyğun istedadları daha sürətli tapmağa kömək edirik, eyni zamanda mütəxəssislər üçün inkişaf yönümlü və mənalı karyera imkanları yaradırıq.",
+    "missionText2": "Süni intellekt, maşın öyrənməsi və proqnozlaşdırıcı analitika kimi yeni texnologiyalardan istifadə etməklə biz ənənəvi işə qəbul metodlarını aşan, istedad kəşfi və karyera inkişafı üçün tamamilə yeni bir yanaşma təqdim edirik.",
+    "valuesTitle": "Bizim Dəyərlərimiz",
+    "values": {
+      "transparency": "Şəffaflıq: İşə götürmə prosesi boyunca açıq, dürüst ünsiyyətə inanırıq.",
+      "innovation": "İnnovasiya: Nəticələri yaxşılaşdırmaq üçün süni intellekt və texnologiya ilə daim sərhədləri aşırıq.",
+      "inclusivity": "Əhatəlilik: Mənşədən asılı olmayaraq hər kəs üçün işləyən platforma qururuq.",
+      "excellence": "Mükəmməllik: Həm iş axtaranlar, həm də şirkətlər üçün müstəsna nəticələr çatdırmağa sadiqik."
+    },
+    "statisticsTitle": "Hər gün artan təsir",
+    "statistics": {
+      "users": "Aktiv İstifadəçi",
+      "jobs": "Aktiv Vakansiya", 
+      "companies": "Şirkət Partneri",
+      "satisfaction": "Müştəri Məmnuniyyəti"
+    }
+  },
+  "contactPage": {
+    "title": "Bizimlə Əlaqə",
+    "subtitle": "PeopleAtWork haqqında suallarınız var? Biz kömək etməyə hazırıq. Komandamızla əlaqə saxlayın və biz 24 saat ərzində sizinlə geri əlaqə saxlayacağıq.",
+    "sendMessageTitle": "Mesaj Göndərin",
+    "form": {
+      "nameLabel": "Ad və Soyad *",
+      "emailLabel": "Email ünvanı *",
+      "subjectLabel": "Mövzu *",
+      "messageLabel": "Mesaj *",
+      "submitButton": "Mesaj Göndər",
+      "submittingButton": "Göndərilir...",
+      "successMessage": "Mesajınız uğurla göndərildi! Tezliklə sizinlə əlaqə saxlayacağıq.",
+      "errorMessage": "Xəta baş verdi. Xahiş edirik yenidən cəhd edin."
+    },
+    "contactInfoTitle": "Əlaqə Məlumatları",
+    "contactInfo": {
+      "email": "Email",
+      "phone": "Telefon",
+      "address": "Ünvan"
+    },
+    "socialMediaTitle": "Sosial Media"
   }
 }

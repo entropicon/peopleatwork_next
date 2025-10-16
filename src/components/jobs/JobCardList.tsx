@@ -1,10 +1,9 @@
 "use client";
 
 import { getLocalizedName } from "@/lib/utils";
-import theme from "@/theme/theme";
 import { JobCardProps } from "@/types/types";
 import { ArrowForward } from "@mui/icons-material";
-import { Button, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
+import { Button, Grid, Stack, Typography } from "@mui/material";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { memo, useMemo } from "react";
@@ -17,9 +16,6 @@ const JobCardList = memo(
 	({ job, md_size = 12 }: { job: JobCardProps; md_size?: number }) => {
 		const t = useTranslations();
 		const lang = useLocale();
-		console.log(job);
-
-		const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
 		const isFullWidth = md_size === 12;
 		const employmentTypeName = useMemo(
 			() => getLocalizedName(job?.employment_type, lang),
@@ -50,7 +46,7 @@ const JobCardList = memo(
 			if (!job?.deadline) {
 				return "";
 			}
-			return dayjs(job.deadline).format("DD MMMM");
+			return dayjs(job.deadline).format("DD MMM");
 		}, [job?.deadline]);
 
 		const isGuest = Boolean(job?.is_guest_job);
@@ -81,11 +77,41 @@ const JobCardList = memo(
 		);
 		const cardLayoutSx = useMemo(
 			() => ({
-				flexDirection: isMediumScreen ? "column" : "row",
-				alignItems: "center",
-				gap: "1rem",
+				flexDirection: { xs: "column", md: "row" },
+				alignItems: { xs: "stretch", md: "center" },
+				gap: { xs: 2, md: 3 },
 			}),
-			[isMediumScreen]
+			[]
+		);
+
+		const infoSectionSx = useMemo(
+			() => ({
+				flexGrow: isFullWidth ? 2 : 1,
+				flexBasis: { xs: "100%", md: "auto" },
+				width: "100%",
+				maxWidth: { xs: "100%", md: "50%" },
+			}),
+			[isFullWidth]
+		);
+
+		const metaSectionSx = useMemo(
+			() => ({
+				flexGrow: 1,
+				width: "100%",
+				maxWidth: { xs: "100%", md: isFullWidth ? "50%" : "30%" },
+				alignItems: { xs: "flex-start", md: "flex-end" },
+				textAlign: { xs: "left", md: "right" },
+			}),
+			[isFullWidth]
+		);
+
+		const actionsSectionSx = useMemo(
+			() => ({
+				width: "100%",
+				maxWidth: { xs: "100%", md: "20%" },
+				alignSelf: { xs: "stretch", md: "auto" },
+			}),
+			[]
 		);
 
 		return (
@@ -94,9 +120,9 @@ const JobCardList = memo(
 					<Stack
 						direction="row"
 						spacing={1}
-						alignItems={"center"}
+						alignItems="center"
 						flex={isFullWidth ? 2 : 1}
-						maxWidth={"50%"}
+						sx={infoSectionSx}
 					>
 						<CardAvatar avatar={ownerLogo} />
 						<Stack spacing={0.5}>
@@ -118,12 +144,7 @@ const JobCardList = memo(
 							</Stack>
 						</Stack>
 					</Stack>{" "}
-					<Stack
-						alignItems={"flex-end"}
-						flex={1}
-						spacing={0.5}
-						maxWidth={isFullWidth ? "50%" : "30%"}
-					>
+					<Stack flex={1} spacing={0.5} sx={metaSectionSx}>
 						<Typography variant="body1" fontWeight={700}>
 							{showSalary ? salaryText : "-"}
 						</Typography>
@@ -143,7 +164,7 @@ const JobCardList = memo(
 						</Typography>
 					</Stack>
 					{isFullWidth && (
-						<Stack spacing={1} flex={1} maxWidth={"20%"} height={"100%"}>
+						<Stack spacing={1} flex={1} height={"100%"} sx={actionsSectionSx}>
 							<Link href={`/job/${job.id}`}>
 								<Button
 									fullWidth

@@ -221,5 +221,48 @@
     "jobLevel": "Job Level",
     "experience": "Experience",
     "requiredSkills": "Required Skills"
+  },
+  "aboutUs": {
+    "heroTitle": "We're Transforming How People Work",
+    "heroSubtitle": "We revolutionizes talent discovery and management through data-driven and emerging technologies, empowering job seekers with fulfilling careers while delivering transformative value for businesses.",
+    "missionTitle": "Our Mission",
+    "missionText1": "Our mission is to revolutionize how companies discover and manage talent through cutting-edge, data-driven technologies. We help businesses find the best talent faster while creating fulfilling, growth-driven career opportunities for professionals.",
+    "missionText2": "By leveraging emerging technologies including AI, machine learning, and predictive analytics, we deliver transformative value that goes beyond traditional hiring methods, creating a new paradigm for talent discovery and career development.",
+    "valuesTitle": "Our Values",
+    "values": {
+      "transparency": "Transparency: We believe in open, honest communication throughout the hiring process.",
+      "innovation": "Innovation: Constantly pushing boundaries with AI and technology to improve outcomes.",
+      "inclusivity": "Inclusivity: Building a platform that works for everyone, regardless of background.",
+      "excellence": "Excellence: Committed to delivering exceptional results for both job seekers and companies."
+    },
+    "statisticsTitle": "Growing Impact, Every Day",
+    "statistics": {
+      "users": "Active Users",
+      "jobs": "Active Jobs",
+      "companies": "Partner Companies", 
+      "satisfaction": "Customer Satisfaction"
+    }
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "subtitle": "Have questions about PeopleAtWork? We're here to help. Reach out to our team and we'll get back to you within 24 hours.",
+    "sendMessageTitle": "Send a Message",
+    "form": {
+      "nameLabel": "Full Name *",
+      "emailLabel": "Email Address *",
+      "subjectLabel": "Subject *",
+      "messageLabel": "Message *",
+      "submitButton": "Send Message",
+      "submittingButton": "Sending...",
+      "successMessage": "Your message has been sent successfully! We'll contact you soon.",
+      "errorMessage": "An error occurred. Please try again."
+    },
+    "contactInfoTitle": "Contact Information",
+    "contactInfo": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    },
+    "socialMediaTitle": "Social Media"
   }
 }

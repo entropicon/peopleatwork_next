@@ -340,6 +340,24 @@ const theme = createTheme({
 				},
 			},
 		},
+		MuiContainer: {
+			styleOverrides: {
+				root: {
+					"&.mt": {
+						marginTop: "56px",
+						paddingTop: "2rem",
+						"@media (min-width:900px)": {
+							marginTop: "64px",
+						},
+					},
+				},
+				maxWidthLg: {
+					"@media (min-width: 1280px)": {
+						maxWidth: "1280px",
+					},
+				},
+			},
+		},
 	},
 });
 
