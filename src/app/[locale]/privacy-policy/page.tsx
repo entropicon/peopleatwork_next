@@ -1,20 +1,13 @@
-import { Box, List, ListItem, Typography } from "@mui/material";
+import { Box, Container, List, ListItem, Typography } from "@mui/material";
 
 const PrivacyPolicy = () => {
 	return (
-		<>
+		<Container maxWidth="lg" className="mt">
 			<Box
 				sx={{
-					mt: 10,
-					px: {
-						xs: "2%",
-						s: "4%",
-						md: "6%",
-					},
 					display: "flex",
 					flexDirection: "column",
-					gap: 3,
-					mb: 8,
+
 				}}
 			>
 				<Typography variant="h1" sx={{ fontWeight: "bold", mb: 1 }}>
@@ -843,7 +836,7 @@ const PrivacyPolicy = () => {
 					</ListItem>
 				</List>
 			</Box>
-		</>
+		</Container>
 	);
 };
 export default PrivacyPolicy;
