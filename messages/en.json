@@ -79,6 +79,26 @@
         "tryAgain": "Try again",
         "contactSupport": "Contact support"
       }
+    },
+    "checkout": {
+      "title": "Payment Details",
+      "orderLabel": "Order #{orderId}",
+      "totalDue": "Total due",
+      "oneTimePayment": "one time payment",
+      "featuresTitle": "Plan highlights",
+      "features": [
+        "Priority placement in job listings"
+      ],
+      "terms": "By continuing, you agree to our terms and will be redirected to finalize the payment.",
+      "receipt": "We will send the receipt to the email associated with your job posting.",
+      "button": {
+        "default": "Pay now",
+        "loading": "Processing payment..."
+      },
+      "feedback": {
+        "success": "Payment request sent successfully.",
+        "error": "We could not process your payment. Please try again."
+      }
     }
   },
   "homePage": {

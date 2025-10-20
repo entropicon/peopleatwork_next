@@ -13,7 +13,15 @@ import dayjs from "dayjs";
 const PRIMARY_BUTTON_SX = { height: 35, borderRadius: 2 };
 
 const JobCardList = memo(
-	({ job, md_size = 12 }: { job: JobCardProps; md_size?: number }) => {
+	({
+		job,
+		md_size = 12,
+		onQuickApply,
+	}: {
+		job: JobCardProps;
+		md_size?: number;
+		onQuickApply: (jobId: number) => void;
+	}) => {
 		const t = useTranslations();
 		const lang = useLocale();
 		const isFullWidth = md_size === 12;
@@ -84,36 +92,6 @@ const JobCardList = memo(
 			[]
 		);
 
-		const infoSectionSx = useMemo(
-			() => ({
-				flexGrow: isFullWidth ? 2 : 1,
-				flexBasis: { xs: "100%", md: "auto" },
-				width: "100%",
-				maxWidth: { xs: "100%", md: "50%" },
-			}),
-			[isFullWidth]
-		);
-
-		const metaSectionSx = useMemo(
-			() => ({
-				flexGrow: 1,
-				width: "100%",
-				maxWidth: { xs: "100%", md: isFullWidth ? "50%" : "30%" },
-				alignItems: { xs: "flex-start", md: "flex-end" },
-				textAlign: { xs: "left", md: "right" },
-			}),
-			[isFullWidth]
-		);
-
-		const actionsSectionSx = useMemo(
-			() => ({
-				width: "100%",
-				maxWidth: { xs: "100%", md: "20%" },
-				alignSelf: { xs: "stretch", md: "auto" },
-			}),
-			[]
-		);
-
 		return (
 			<Grid size={gridSize}>
 				<StyledCard sx={cardLayoutSx}>
@@ -121,15 +99,11 @@ const JobCardList = memo(
 						direction="row"
 						spacing={1}
 						alignItems="center"
-						flex={isFullWidth ? 2 : 1}
-						sx={infoSectionSx}
+						sx={{ width: isFullWidth ? "50%" : "70%" }}
 					>
 						<CardAvatar avatar={ownerLogo} />
-						<Stack spacing={0.5}>
-							<Typography variant="h6" className="one-line-text">
-								{job?.title || ""}
-							</Typography>
-
+						<Stack spacing={0.5} className="one-line-text">
+							<Typography variant="h6" className="one-line-text">{job?.title || ""}</Typography>
 							<CompanyInfo
 								location={job?.owner?.location || ""}
 								companyName={job?.owner?.name || ""}
@@ -144,7 +118,7 @@ const JobCardList = memo(
 							</Stack>
 						</Stack>
 					</Stack>{" "}
-					<Stack flex={1} spacing={0.5} sx={metaSectionSx}>
+					<Stack spacing={0.5} sx={{ width: "30%" }}>
 						<Typography variant="body1" fontWeight={700}>
 							{showSalary ? salaryText : "-"}
 						</Typography>
@@ -159,12 +133,26 @@ const JobCardList = memo(
 								{t("common.deadline")}: {deadlineText}
 							</Typography>
 						)}
-						<Typography variant="body2" className="text-neutral-dark">
-							<b>{statsText.hired}</b> / {statsText.openings}
-						</Typography>
+						{isFullWidth ? (
+							<Typography variant="body2" className="text-neutral-dark">
+								<b>{statsText.hired}</b> / {statsText.openings}
+							</Typography>
+						) : (
+							<Link href={`/job/${job.id}`}>
+								<Button
+									fullWidth
+									variant="contained"
+									sx={PRIMARY_BUTTON_SX}
+									size="small"
+									endIcon={<ArrowForward />}
+								>
+									{t("button.view_details")}
+								</Button>
+							</Link>
+						)}
 					</Stack>
 					{isFullWidth && (
-						<Stack spacing={1} flex={1} height={"100%"} sx={actionsSectionSx}>
+						<Stack spacing={1} height={"100%"} sx={{ width: "20%" }}>
 							<Link href={`/job/${job.id}`}>
 								<Button
 									fullWidth
@@ -182,6 +170,7 @@ const JobCardList = memo(
 									variant={"outlined"}
 									sx={PRIMARY_BUTTON_SX}
 									size="small"
+									onClick={() => onQuickApply(job.id)}
 								>
 									{t("button.quick_apply")}
 								</Button>

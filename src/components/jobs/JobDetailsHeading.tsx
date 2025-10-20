@@ -15,9 +15,10 @@ import {
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
-import { memo, type ReactElement, useMemo } from "react";
+import { memo, type ReactElement, useCallback, useMemo, useState } from "react";
 import ShareButtons from "../common/ShareButtons";
 import { CardAvatar } from "../common/card_ui";
+import ApplyGuestJobDialog from "./ApplyGuestJobDialog";
 
 const MetaChip = memo(
 	({
@@ -68,7 +69,7 @@ const JobDetailsHeading = memo(({ job }: { job: Job; getJob: () => void }) => {
 	}, [job?.category, lang]);
 
 	const isConfidential = job?.is_company_confidential;
-	const ownerName = !isConfidential ? job?.owner?.name || "" : "";
+	const ownerName = isConfidential ? "" : job?.owner?.name || "";
 
 	const metaChips = useMemo(() => {
 		const chips: Array<{
@@ -106,6 +107,14 @@ const JobDetailsHeading = memo(({ job }: { job: Job; getJob: () => void }) => {
 		[job?.id]
 	);
 
+	const [open, setOpen] = useState(false);
+	const [jobId, setJobId] = useState<string | null>(null);
+
+	const onQuickApply = useCallback((jobId: string) => {
+		setJobId(jobId);
+		setOpen(true);
+	}, []);
+
 	return (
 		<Box
 			display="flex"
@@ -115,6 +124,7 @@ const JobDetailsHeading = memo(({ job }: { job: Job; getJob: () => void }) => {
 				position: "relative",
 			}}
 		>
+			<ApplyGuestJobDialog open={open} setOpen={setOpen} job={jobId || ""} />
 			<Paper elevation={0} sx={jobDetailsPaperStyles}>
 				<Grid container spacing={2} alignItems="center">
 					<Grid
@@ -181,23 +191,38 @@ const JobDetailsHeading = memo(({ job }: { job: Job; getJob: () => void }) => {
 							justifyContent="flex-end"
 						>
 							<ShareButtons id={job?.id} />
-
-							<Button
-								variant="contained"
-								color="primary"
-								size="large"
-								component={Link}
-								href={applyHref}
-								sx={{
-									fontFamily: "Epilogue SemiBold",
-									px: 3,
-									py: 1.5,
-									borderRadius: 1.5,
-								}}
-								endIcon={<ArrowOutwardRounded />}
-							>
-								{t("common.apply")}
-							</Button>
+							{job?.owner == null ? (
+								<Button
+									variant={"contained"}
+									size="large"
+									sx={{
+										fontFamily: "Epilogue SemiBold",
+										px: 3,
+										py: 1.5,
+										borderRadius: 1.5,
+									}}
+									onClick={() => onQuickApply(job.id)}
+									endIcon={<ArrowOutwardRounded />}
+								>
+									{t("button.quick_apply")}
+								</Button>
+							) : (
+								<Button
+									variant="contained"
+									size="large"
+									component={Link}
+									href={applyHref}
+									sx={{
+										fontFamily: "Epilogue SemiBold",
+										px: 3,
+										py: 1.5,
+										borderRadius: 1.5,
+									}}
+									endIcon={<ArrowOutwardRounded />}
+								>
+									{t("common.apply")}
+								</Button>
+							)}
 						</Stack>
 					</Grid>
 				</Grid>

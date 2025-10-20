@@ -11,6 +11,7 @@ import JobCardGrid from "../jobs/JobCardGrid";
 import JobCardList from "../jobs/JobCardList";
 import AdsLayout from "./AdsLayout";
 import { Category, EmployeesTypes, JobCardProps } from "@/types/types";
+import ApplyGuestJobDialog from "../jobs/ApplyGuestJobDialog";
 
 interface JobsComponentProps {
 	jobs: {
@@ -27,6 +28,8 @@ const JobsComponent: React.FC<JobsComponentProps> = ({
 	categories,
 }) => {
 	const t = useTranslations();
+	const [open, setOpen] = React.useState(false);
+	const [jobId, setJobId] = React.useState<number | null>(null);
 	const router = useRouter();
 	const searchParams = useSearchParams();
 	const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"), {
@@ -162,34 +165,55 @@ const JobsComponent: React.FC<JobsComponentProps> = ({
 		[t, employmentTypes, categories]
 	);
 
+	const handleQuickApply = useCallback(
+		(jobId: number) => {
+			setOpen(true);
+			setJobId(jobId);
+		},
+		[setOpen]
+	);
+
 	return (
-		<AdsLayout
-			pageCount={jobs?.total_pages || 0}
-			filterData={filterData}
-			setSort={setSortHandler}
-			sort={sort}
-			listingTitle={t("common.jobListing")}
-			setListStyle={setListStyleHandler}
-			listStyle={listStyle}
-		>
-			{jobs?.jobs?.length > 0 ? (
-				jobs.jobs?.map((job) =>
-					listStyle === "grid" || isMediumScreen ? (
-						<JobCardGrid key={job.id} job={job} size={4} />
-					) : (
-						<JobCardList key={job.id} job={job} md_size={12} />
+		<>
+			<ApplyGuestJobDialog open={open} setOpen={setOpen} job={String(jobId)} />
+			<AdsLayout
+				pageCount={jobs?.total_pages || 0}
+				filterData={filterData}
+				setSort={setSortHandler}
+				sort={sort}
+				listingTitle={t("common.jobListing")}
+				setListStyle={setListStyleHandler}
+				listStyle={listStyle}
+			>
+				{jobs?.jobs?.length > 0 ? (
+					jobs.jobs?.map((job) =>
+						listStyle === "grid" || isMediumScreen ? (
+							<JobCardGrid
+								key={job.id}
+								job={job}
+								size={4}
+								onQuickApply={handleQuickApply}
+							/>
+						) : (
+							<JobCardList
+								key={job.id}
+								job={job}
+								md_size={12}
+								onQuickApply={handleQuickApply}
+							/>
+						)
 					)
-				)
-			) : (
-				<Grid
-					size={{
-						xs: 12,
-					}}
-				>
-					<Typography>{t("common.notFoundAnyResults")}</Typography>
-				</Grid>
-			)}
-		</AdsLayout>
+				) : (
+					<Grid
+						size={{
+							xs: 12,
+						}}
+					>
+						<Typography>{t("common.notFoundAnyResults")}</Typography>
+					</Grid>
+				)}
+			</AdsLayout>
+		</>
 	);
 };
 

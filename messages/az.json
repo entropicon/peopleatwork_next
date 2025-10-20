@@ -79,6 +79,26 @@
         "tryAgain": "Yenidən cəhd et",
         "contactSupport": "Dəstək ilə əlaqə"
       }
+    },
+    "checkout": {
+      "title": "Ödəniş detalları",
+      "orderLabel": "Sifariş #{orderId}",
+      "totalDue": "Ümumi məbləğ",
+      "oneTimePayment": "birdəfəlik ödəniş",
+      "featuresTitle": "Planın üstünlükləri",
+      "features": [
+        "Vakansiya siyahılarında prioritet yerləşdirmə"
+      ],
+      "terms": "Davam etməklə, şərtlərimizlə razılaşırsınız və ödənişi tamamlamaq üçün yönləndiriləcəksiniz.",
+      "receipt": "Qəbzi vakansiyanızla bağlı email ünvanına göndərəcəyik.",
+      "button": {
+        "default": "İndi ödə",
+        "loading": "Ödəniş icra olunur..."
+      },
+      "feedback": {
+        "success": "Ödəniş sorğusu uğurla göndərildi.",
+        "error": "Ödənişi emal edə bilmədik. Zəhmət olmasa yenidən cəhd edin."
+      }
     }
   },
   "homePage": {

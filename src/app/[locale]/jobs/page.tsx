@@ -1,6 +1,6 @@
 import JobsComponent from "@/components/common/JobsComponent";
 import { getCategories, getEmploymentTypes, getJobs } from "@/lib/api";
-import { Box } from "@mui/material";
+import { Container } from "@mui/material";
 
 export default async function JobsPage({
 	searchParams,
@@ -40,23 +40,12 @@ export default async function JobsPage({
 	const categories = await getCategories();
 
 	return (
-		<>
-			<Box
-				sx={{
-					mt: 4,
-					px: {
-						xs: "2%",
-						s: "4%",
-						md: "6%",
-					},
-				}}
-			>
-				<JobsComponent
-					jobs={jobs}
-					employmentTypes={employmentTypes}
-					categories={categories}
-				/>
-			</Box>
-		</>
+		<Container maxWidth="lg" sx={{pt:4}}>
+			<JobsComponent
+				jobs={jobs}
+				employmentTypes={employmentTypes}
+				categories={categories}
+			/>
+		</Container>
 	);
 }

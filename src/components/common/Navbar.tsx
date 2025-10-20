@@ -305,7 +305,7 @@ const Navbar: React.FC = () => {
 							}}
 						>
 							{language}
-							{/* <Link href="/post-job">
+							<Link href="/post-job">
 								<Button
 									variant="contained"
 									size="small"
@@ -319,7 +319,7 @@ const Navbar: React.FC = () => {
 								>
 									{t("button.post_job")}
 								</Button>
-							</Link> */}
+							</Link>
 							<React.Fragment>
 								<Link
 									href={`${process.env.NEXT_PUBLIC_MAIN_FRONT_URL}/auth/login`}

@@ -23,3 +23,7 @@ export const MYJOBS = `${BASE_URL}/jobs/job/`;
 export const BENEFITS = `${BASE_URL}/jobs/benefits`;
 export const SKILLS = `${BASE_URL}/jobs/skills`;
 export const JOB_REQUIREMENTS = `${BASE_URL}/jobs/job-requirements/`;
+
+// PAYMENT
+
+export const CREATE_PAYMENT = `${BASE_URL}/payment/create/`;
