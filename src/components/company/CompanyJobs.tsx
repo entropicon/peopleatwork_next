@@ -40,7 +40,7 @@ const CompanyJobs = ({
 				/>
 				<Grid container spacing={2}>
 					{jobs.map((job) => (
-						<JobCardList key={job.id} job={job} md_size={6} />
+						<JobCardList key={job.id} job={job} md_size={6} onQuickApply={()=>{}}/>
 					))}
 				</Grid>
 			</Container>
