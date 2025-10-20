@@ -20,7 +20,7 @@ const JobCardList = memo(
 	}: {
 		job: JobCardProps;
 		md_size?: number;
-		onQuickApply: (jobId: number) => void;
+		onQuickApply?: (jobId: number) => void;
 	}) => {
 		const t = useTranslations();
 		const lang = useLocale();
@@ -170,7 +170,7 @@ const JobCardList = memo(
 									variant={"outlined"}
 									sx={PRIMARY_BUTTON_SX}
 									size="small"
-									onClick={() => onQuickApply(job.id)}
+									onClick={() => onQuickApply?.(job.id)}
 								>
 									{t("button.quick_apply")}
 								</Button>

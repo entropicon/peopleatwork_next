@@ -50,7 +50,7 @@ const JobCardGrid = memo(
 	}: {
 		job: JobCardProps;
 		size?: number;
-		onQuickApply: (jobId: number) => void;
+		onQuickApply?: (jobId: number) => void;
 	}) => {
 		const lang = useLocale();
 		const t = useTranslations();
@@ -198,7 +198,7 @@ const JobCardGrid = memo(
 								variant={"outlined"}
 								sx={SPLIT_BUTTON_SX}
 								size="small"
-								onClick={() => onQuickApply(job.id)}
+								onClick={() => onQuickApply?.(job.id)}
 							>
 								{t("button.quick_apply")}
 							</Button>
