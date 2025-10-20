@@ -118,7 +118,7 @@ const JobCardList = memo(
 							</Stack>
 						</Stack>
 					</Stack>{" "}
-					<Stack spacing={0.5} sx={{ width: "30%" }}>
+					<Stack spacing={0.5} sx={{ width: "30%" , alignItems: "flex-end"}}>
 						<Typography variant="body1" fontWeight={700}>
 							{showSalary ? salaryText : "-"}
 						</Typography>
