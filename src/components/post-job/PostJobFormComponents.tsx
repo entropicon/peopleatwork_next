@@ -27,6 +27,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import React from "react";
 import Tiptap from "../tiptap/Tiptap";
+import { CREATE_GUEST_JOB } from "@/constants/apiRoutes";
 
 const PostJobFormComponents = ({
 	employmentTypes,
@@ -78,7 +79,7 @@ const PostJobFormComponents = ({
 			};
 			try {
 				const response = await axios.post(
-					"http://127.0.0.1:8000/jobs/create-guest-job",
+					CREATE_GUEST_JOB,
 					payload
 				);
 				if (response.status === 201) {

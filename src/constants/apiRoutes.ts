@@ -16,6 +16,7 @@ export const HOME_PAGE = `${BASE_URL}/jobs/home-page`;
 export const COMPANY_JOBS_FOR_FILTER = `${BASE_URL}/jobs/company-jobs-for-filter`;
 export const JOBS = `${BASE_URL}/jobs/jobs`;
 export const JOB_DETAILS = `${BASE_URL}/jobs/job/`;
+export const CREATE_GUEST_JOB = `${BASE_URL}/jobs/create-guest-job`;
 export const EMPLOYMENTTYPE = `${BASE_URL}/jobs/employmenttype`;
 export const JOBCATEGORY = `${BASE_URL}/jobs/jobcategory`;
 export const SIMILAR_JOBS = `${BASE_URL}/jobs/similar-jobs/`;
